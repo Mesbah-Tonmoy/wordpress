@@ -1,0 +1,141 @@
+/*-------------------------
+    Variables
+-------------------------*/
+:root {
+
+// Color 12141D
+ --color-body-bg3: #e2e9f3; 
+--color-body-bg2: #12141D;
+--color-body-bg: #e2e9f3; 
+--color-action: #111b2a;
+--color-primary: #111b2a;
+--color-secondary: #777777;
+--border-color: #111b2a;
+--color-button: #000000;
+--color-white: #ffffff;
+--color-title: #111b2a;
+
+--color-secondary2: #777777;
+--color-title2: #111b2a;
+--color-dark-meta: #969fac;
+    
+  
+//Font Family
+--font-primary: 'recoletaregular_demo';
+--font-secondary: 'Roboto', sans-serif; 
+--font-awesome: 'Font Awesome 5 Free';
+
+// Transition
+--transition: all 0.3s ease-in-out;
+
+//Fonts Size
+--font-body-1: 18px;
+--font-body-2: 16px;
+--font-body-3: 14px;
+--font-body-4: 12px;
+
+// Line Height
+--line-height-b1: 1.67;
+--line-height-b2: 1.75;
+--line-height-b3: 1.45;
+--line-height-b4: 1.4;
+
+// Heading Font 
+--h1: 70px; 
+--h2: 50px; 
+--h3: 40px;
+--h4: 30px; 
+--h5: 22px; 
+--h6: 18px;
+
+// 1199
+
+--h1m1: 60px; 
+--h2m1: 40px; 
+--h3m1: 30px;
+--h4m1: 24px; 
+--h5m1: 20px; 
+--h6m1: 16px;
+
+// 991
+
+--h1m2: 70px; 
+--h2m2: 50px; 
+--h3m2: 40px;
+--h4m2: 30px; 
+--h5m2: 22px; 
+--h6m2: 18px; 
+
+// 767
+--h1m3: 70px; 
+--h2m3: 50px; 
+--h3m3: 40px;
+--h4m3: 30px; 
+--h5m3: 22px; 
+--h6m3: 18px;
+
+// 767
+--h1m4: 70px; 
+--h2m4: 50px; 
+--h3m4: 40px;
+--h4m4: 30px; 
+--h5m4: 22px; 
+--h6m4: 18px; 
+
+// Gradient Color
+--gradient-primary: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
+--gradient-blue: linear-gradient(145.92deg, #5956E9 20.18%, #9991FF 76.9%);
+--gradient-accent: linear-gradient(180deg, #FAB8C4 0%, #FFEDF0 100%);
+--gradient-white: linear-gradient(266.3deg, rgba(236, 242, 246, 0) 7.84%, #ECF2F6 29.1%, rgba(236, 242, 246, 0) 64.32%);
+--gradient-dark: linear-gradient(180deg, #27272E 0%, #303035 100%);
+
+
+
+}
+
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (max-width: 991.99px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
+
+body.active-color-mode {
+
+         
+    --color-body-bg: #ffffff; 
+    --color-body-bg3: #e2e9f3; 
+    --color-action: #FA6444;
+    --color-primary: #111b2a;
+    --color-secondary: #777777;
+    --border-color: #12141D;
+    --color-button: #FA6444;
+    --color-white: #ffffff;
+    --color-title: #111b2a;
+    --color-body-bg2: #12141D;
+
+
+  .project-grid.dark-layout .content .subtitle { 
+        color: var(--color-action); 
+    }
+
+    .hero-banner-5 .hero-banner-content span.before-title {
+        color: var(--color-action);
+    }
+    .vitax-blog-news .extra .short li.auther a{
+         color: var(--color-action); 
+    }
+    .vitax-blog-news .list_inner {
+       
+        transition: all .3s ease;
+        
+        &:hover{
+            background-color: #F2FBFB;
+        }
+    }
+         
+}

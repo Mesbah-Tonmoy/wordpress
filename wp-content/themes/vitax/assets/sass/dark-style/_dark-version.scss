@@ -1,0 +1,368 @@
+/*-------------------------
+    Dark Style
+-------------------------*/
+
+
+
+body.active-dark-mode {
+
+    color-scheme: dark;
+
+    --color-body-bg2: #12141D;
+    --color-body-bg: #000000;
+    --color-action: #ffffff;
+    --color-primary: #ffffff;
+    --color-secondary: #D3D3D4;
+    --border-color: #212121;
+    --color-button: #0f0f0f;
+    --color-white: #ffffff;
+    --color-title: #ffffff;
+
+    --color-secondary2: #777777;
+    --color-title2: #111b2a;
+
+    .vitax_modalbox .description_wrap,
+    .vitax-project-modalbox .description_wrap {
+
+        background-color: var(--color-button);
+    }
+    .contact-form .form-group .submit-btn:hover {
+        color: var(--color-action);
+    }
+    .btn-layout-dark::after { 
+        border: 1px solid var(--color-action); 
+    }
+   .project-grid .thumbnail::before {
+         
+        background-color: var(--color-body-bg2);
+    }
+    .about-tab-wrp .tab-content .tab-content-mid .thumbnail-awwards i { 
+        color: var(--color-title2); 
+    }
+
+    .marque-images.light{
+        display: none;
+        visibility: hidden;
+    }
+
+    .marque-images.dark{
+        display: block;
+        visibility: visible; 
+    }
+
+    .testimonial-review .slick-dots li button::before {
+
+    border: 1px solid var(--color-secondary);
+
+    }
+    .testimonial-review .slick-dots li.slick-active button::before {
+    background-color: var(--color-secondary);
+    }
+    .play-btn-light { 
+        color: var(--color-button);
+       
+    } 
+    .play-btn-light:hover { 
+        color: var(--color-white);
+       
+    }
+    .btn-layout2-dark {
+         color: var(--color-action);
+
+    }
+    .btn-layout2-dark:before {
+
+        border: 1px solid var(--color-action);
+
+    }
+    .btn-layout2-dark:after {
+
+        background-color: var(--color-action);
+
+    }
+    .btn-layout2-dark:hover {
+
+        color: var(--color-button);
+
+    }
+    .btn-layout2-dark:hover i {
+        color: var(--color-button);
+    }
+
+
+
+
+    .progress-charts .progress {
+        
+        background: var(--color-button);
+    }
+    .header-action .sidemenu-btn button span {
+        
+        background-color: var(--color-button); 
+       
+    }
+    
+     
+    .btn-layout-dark:hover i {
+        color: var(--color-action);
+    }
+    .contact-info.contact-info-style-2 .contact-address .content .subtitle {
+          color: var(--color-secondary);
+    }
+
+
+    .footer-copyright .copyright-text {
+        color: var(--color-secondary);
+        
+    }
+
+    .header-mainmenu.sticky-menu {
+
+        background-color: var(--border-color);
+
+    }
+
+    .header-offcanvasmenu {
+
+        background-color: var(--border-color);
+    }
+
+    .header-action .sidemenu-btn button {
+        background-color: transparent;
+        border: 1px solid var(--color-button);
+    }
+
+    .header-action .sidemenu-btn button:hover span {
+        background-color: var(--color-primary);
+    }
+
+    .btn-fill-border:hover span {
+        color: var(--color-primary);
+
+    }
+
+    .btn-fill-border:hover i {
+        color: var(--color-primary);
+    }
+    .form-control:focus {
+        color: var(--color-action);
+        
+    }
+
+    .input-group {
+        background-color: var(--color-button);
+        box-shadow: none; 
+        &::before {
+            content: url("../../assets/media/icon/message-light.png");
+        } 
+    }
+ 
+    
+    .vitax_modalbox .box_inner,
+    .vitax-project-modalbox .box_inner {
+
+        background-color: var(--color-button);
+
+    }
+
+  
+
+    .mobile-nav-logo {
+        .light-mode {
+            display: none;
+        }
+
+        .dark-mode {
+            display: block;
+        }
+    }
+
+    .header-logo {
+        .light-version-logo {
+            display: none;
+        }
+
+        .dark-version-logo {
+            display: block;
+        }
+    }
+
+    .vitax_modalbox .description_wrap,
+    .vitax-project-modalbox .description_wrap {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-action) var(--color-action);
+    }
+
+    .contact-info .contact-address .icon .image-icon_light {
+        display: block;
+    }
+
+    .contact-info .contact-address .icon .image-icon {
+        display: none;
+    }
+
+    .section-call-action .call-action-title span.haf-c {
+
+        background-color: var(--color-action);
+
+    }
+
+    .service-grid-wrp3 .service-grid .icon .image-icon_light {
+        display: block;
+    }
+
+    .service-grid-wrp3 .service-grid .icon .image-icon {
+        display: none;
+    }
+
+
+
+    .shape-group-7 .shape-1 img {
+        filter: brightness(0.1);
+    }    
+
+    .hero-banner-5 .shape-group-7 .shape.shape-2 img {
+        filter: brightness(0.5);
+    }  
+    .shape-group-8 .shape.shape-1 img {
+        filter: brightness(0.5);
+    }
+
+    .shape-group-1 .shape-1 img {
+        filter: brightness(0.2);
+    }
+  .shape-group-12 .shape.shape-1 img {
+        filter: brightness(0.5);
+    }
+
+    .shape-group-13 .shape-1 img {
+        filter: brightness(0.2);
+    }
+
+
+    .service-grid-wrp .service-grid .icon .image-icon_light {
+        display: block;
+    }
+
+    .service-grid-wrp .service-grid .icon .image-icon {
+        display: none;
+    }
+ 
+
+}
+
+
+body.active-color-mode.active-dark-mode {
+
+    --color-action: #FA6444;
+    --color-body-bg: #000000;
+    --color-primary: #ffffff;
+    --color-secondary: #D3D3D4;
+    --border-color: #212121;
+    --color-button: #FA6444;
+    --color-white: #ffffff;
+    --color-title: #ffffff;
+
+    --color-secondary2: #777777;
+    --color-title2: #111b2a;
+    .about-tab-wrp2 .tab-content .about-info-list li span,
+    .contact-info.contact-info-3 .contact-address span {
+        color: var(--color-dark-meta); 
+    }
+    .form-control:focus {
+        color: var(--color-primary); 
+    }
+    .btn-dark {
+        
+        color: var(--color-primary);
+        background-color: var(--border-color);
+        border: 1px solid var(--border-color);
+         
+    }
+
+    .vitax-blog-news .list_inner:hover {
+      background-color:  var(--border-color);
+    }
+
+
+    .form-style-3 .contact-form {
+        background: var(--color-body-bg2);
+         
+    }
+ 
+    .project-grid.dark-layout .content .title .subtitle { 
+        color: var(--color-action); 
+    }
+ 
+    .hero-banner-5 .hero-banner-content span.before-title {
+        color: var(--color-action);
+    }
+
+  
+
+    .color-switcher ul li a {
+        color: var(--color-white);
+    }
+
+     .hero-banner-1 .hero-banner-content {
+       h1{
+        color: var(--color-title2); 
+       } 
+       h2{
+        color: var(--color-title2); 
+       }
+    }
+    .hero-banner-1 p{
+        color: var(--color-secondary2);
+    }
+    .shape-group-10 .shape.shape-2 img {
+        filter: brightness(0.4);
+    } 
+    .shape-group-11 .shape.shape-1 img {
+        filter: brightness(0.5);
+    }
+
+    .shape-group-10 .shape.shape-1 img {
+        filter: brightness(0.4);
+    } 
+    .shape-group-12 .shape.shape-1 img {
+        filter: brightness(0.4);
+    }
+  .shape-group-12 .shape.shape-1 img {
+        filter: brightness(0.4);
+    }
+
+    .services-grid-dark .image-icon {
+        display: block;
+    }
+    .services-grid-dark .image-icon_light {
+        display: none;
+    }
+    .mainmenu > li > a {
+        color: var( --color-secondary2);
+    
+    }
+    .mainmenu > li.current a{ 
+        color: var(--color-action); 
+    }
+    .header-action .sidemenu-btn button {
+        background-color: var(--color-body-bg);
+        border: 1px solid var(--color-body-bg);
+    }
+    .header-action .sidemenu-btn button span { 
+        background-color: var(--color-primary);
+    
+    }
+    .hero-banner-area .social-share a {
+        color: var(--color-secondary2);
+        position: relative;
+    }
+
+  .header-mainmenu.sticky-menu .header-logo .version-logo {
+    display: none;
+ }
+ .header-mainmenu.sticky-menu .header-logo .sticky-logo {
+        display: block;
+    }
+
+}
