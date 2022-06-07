@@ -75,6 +75,12 @@ body.active-dark-mode {
     --color-title2: #111b2a;
 }
 
+.header-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 body.active-dark-mode .vitax_modalbox .description_wrap,
   body.active-dark-mode .vitax-project-modalbox .description_wrap {
     background-color: var(--color-button);

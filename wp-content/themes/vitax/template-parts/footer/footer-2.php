@@ -21,85 +21,24 @@ if ( "no" !== $footer_top_area && "0" !== $footer_top_area && !is_404()) {
 }
 ?>
  <footer class="<?php echo esc_attr( $lineclass );?> footer-area <?php echo esc_attr( $footer_top_on );?>">
-    <div class="container">
-         <?php if(!empty($bdwebteam_options['bdwebteam_footer_social_enable']) ){ ?>    
-            <div class="footer-top">
-                <div class="footer-social-link">
-                    <ul class="list-unstyled">
-                    <?php
-                        foreach ($bdwebteam_options['bdwebteam_social_icons'] as $key => $value) {
-                            if ($value != '') {
-                                echo '<li><a class="' . esc_attr($key) . ' social-icon" href="' . esc_url($value) . '" title="' . esc_attr(ucwords(esc_attr($key))) . '" target="_blank"><i class="fab fa-' . esc_attr($key) . '"></i></a></li>';
-                            }
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-         <?php } ?> 
-        <?php if(is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') || is_active_sidebar('footer-4')){ ?>
-        <div class="footer-main">
+    <div class="footer-bottom">
+
+        <div class="container">
             <div class="row">
-                 <?php if (is_active_sidebar('footer-1')) { ?>
-                        <!-- Start Single Widget -->
-                        <div class="col-xl-6 col-lg-4">
-                            <div class="footer-widget border-end">
-                                <?php dynamic_sidebar('footer-1'); ?>
-                            </div>
-                        </div><!-- End Single Widget -->
-                    <?php } ?>
+                <?php if(!empty($bdwebteam_options['bdwebteam_copyright_contact'])){ ?>             
+                    <div class="footer-copyright-wrp align-items-center">
+                        <div class="footer-copyright">
+                            <span class="copyright-text"><?php echo wp_kses( $bdwebteam_options['bdwebteam_copyright_contact'], $allowed_tags ); ?></span>
+                        </div>
 
-                <div class="col-xl-6 col-lg-8">
-
-                    <div class="row">                        
-                        <?php if (is_active_sidebar('footer-2')) { ?>
-                            <!-- Start Single Widget -->
-                            <div class="col-xl-6 col-lg-4 col-md-4">
-                                <?php dynamic_sidebar('footer-2'); ?>                            
+                        <div class="footer-back-to-wrp">
+                            <div class="footer-back-to-top">
+                                <a href="#main-wrapper" id="back-to-top"><span>Back To Top</span> <i class="fas fa-long-arrow-alt-up"></i></a>
                             </div>
-                        <?php } ?> 
 
-                        <?php if (is_active_sidebar('footer-3')) { ?>
-                            <!-- Start Single Widget -->
-                            <div class="col-xl-3 col-lg-4 col-md-4">
-                                <?php dynamic_sidebar('footer-3'); ?>                            
-                            </div>
-                        <?php } ?>  
-                        <?php if (is_active_sidebar('footer-4')) { ?>
-                            <!-- Start Single Widget -->
-                            <div class="col-xl-3 col-lg-4 col-md-4">
-                                <?php dynamic_sidebar('footer-4'); ?>                            
-                            </div>
-                        <?php } ?>
-
+                        </div>
                     </div>
-                    
-                </div>
-            </div>
-        </div>
-        <?php } ?>
-
-        <div class="footer-bottom">
-            <div class="row">
-                 <?php if(!empty($bdwebteam_options['bdwebteam_copyright_contact'])){ ?>             
-                <div class="col-md-6">
-                    <div class="footer-copyright">
-                        <span class="copyright-text"><?php echo wp_kses( $bdwebteam_options['bdwebteam_copyright_contact'], $allowed_tags ); ?></span>
-                    </div>
-                </div>
                 <?php } ?>
-
-                <?php if(!empty($bdwebteam_options['bdwebteam_footer_footerbottom'])){ ?>
-                <div class="col-md-6">
-                    <div class="footer-bottom-link">
-
-                     <?php if (has_nav_menu('footerbottom')) { ?>
-                            <?php wp_nav_menu($bdwebteam_footer_bottom_menu_args); ?>
-                        <?php } ?> 
-
-                    </div>
-                </div>
-                    <?php } ?>
             </div>
         </div>
     </div>

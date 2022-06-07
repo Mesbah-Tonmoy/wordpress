@@ -30,4 +30,4 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 <div id="main-wrapper" class="main-wrapper">
-<?php get_template_part('template-parts/header/header', 'main'); ?> 
+<?php get_template_part('template-parts/header/header', '2'); ?> 

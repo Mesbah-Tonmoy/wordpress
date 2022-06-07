@@ -8,7 +8,7 @@
  */
 $bdwebteam_options       = Helper::bdwebteam_get_options();
 $header_layout      = Helper::bdwebteam_header_layout();
-$bdwebteam_active_onepage = get_field( "bdwebteam_active_onepage");
+$bdwebteam_active_onepage = '';
 if ( $bdwebteam_active_onepage == 'yes' ) { 
     $bdwebteam_nav_menu_args = Helper::bdwebteam_nav_menu_args_onepage();
 }else{ 
@@ -19,8 +19,8 @@ $header_sticky      = $header_layout['header_sticky'];
 $header_sticky      = ("1" !== $header_sticky && "0" !== $header_sticky) ? " header-sticky " : "";
 $bdwebteam_nav_menu_args = Helper::bdwebteam_nav_menu_args();
 $logo               = empty($bdwebteam_options['bdwebteam_light_head_logo2']['url'] ) ? Helper::get_img( 'logo/logo.png' ) :$bdwebteam_options['bdwebteam_light_head_logo2']['url'];
-$darklogo           = empty($bdwebteam_options['bdwebteam_dark_header_logo']['url'] ) ? Helper::get_img( 'logo/logo-3.svg' ) :$bdwebteam_options['bdwebteam_dark_header_logo']['url'];
-$stickylogo         = empty($bdwebteam_options['bdwebteam_sticky_header_logo']['url'] ) ? Helper::get_img( 'logo/logo-2.svg' ) :$bdwebteam_options['bdwebteam_sticky_header_logo']['url'];
+$darklogo           = get_template_directory_uri() . '/assets/media/logo-light.png';
+$stickylogo         = get_template_directory_uri() . '/assets/media/logo-dark.png';
 
 $bdwebteam_button_layout = Helper::bdwebteam_header_button_layout();
 
@@ -42,7 +42,7 @@ $button_url             = $bdwebteam_button_layout['header_button_url'];
                                title="<?php echo esc_attr(get_bloginfo('name')); ?>" rel="<?php echo esc_attr__( 'home', 'vitax' ); ?>">
                                 <?php if ('image' == $bdwebteam_options['bdwebteam_logo_type']): ?>
                                       <?php if($bdwebteam_options['bdwebteam_light_head_logo2']){ ?>
-                                    <img class="light-version-logo" src="<?php echo esc_url( $logo ); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+                                    <img class="light-version-logo" src="<?php echo esc_url( get_template_directory_uri() . '/assets/media/logo-dark.png' ); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                                 <?php } ?>       
                                 <?php if($bdwebteam_options['bdwebteam_dark_header_logo']){ ?>                      
                                     <img class="dark-version-logo" src="<?php echo esc_url( $darklogo ); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
@@ -90,8 +90,38 @@ $button_url             = $bdwebteam_button_layout['header_button_url'];
                     } ?>
                 </div>
                 <div class="header-action">
-                    <ul class="list-unstyled">
-                         <?php if ("no" !== $header_button && "0" !== $header_button):?>
+                    <ul class="header-action-icon  d-flex">
+                        <li class="color-switcher">
+                            <ul>
+                                <li title="Light Mode">
+                                    <a href="javascript:void(0)" class="btn-wrap btn-layout-light setColor light" data-theme="light">
+                                        <i class="fal fa-lightbulb-on"></i>
+                                    </a>
+                                </li>
+                                <li title="Dark Mode">
+                                    <a href="javascript:void(0)" class="btn-wrap btn-layout-light setColor dark" data-theme="dark">
+                                        <i class="fas fa-moon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hide-mobile">
+                            <div class="btn-box-wrp">
+                                <a href="#" class="btn-layout-dark">
+                                    <span>Get A Quote </span> <i class="fas fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="sidemenu-btn d-lg-block d-none">
+                            <button class="btn-wrap btn-layout-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenuRight">
+                                <span></span>
+                                <span></span>
+
+                            </button>
+                        </li>
+                         
+                        
+                        <!-- <?php if ("no" !== $header_button && "0" !== $header_button):?>
                             <li class="header-btn">
                                 <a href="<?php echo esc_url( $button_url ); ?>" class="bdwebteam-btn btn-fill-primary"><?php echo esc_html($bdwebteam_options['button_txt']); ?> </a>
                             </li>
@@ -147,10 +177,39 @@ $button_url             = $bdwebteam_button_layout['header_button_url'];
                              
                         <?php  }
                         } 
-                    ?>
+                    ?> -->
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </header> 
+
+<div class="offcanvas offcanvas-end header-offcanvasmenu" tabindex="-1" id="offcanvasMenuRight">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="main-navigation list-unstyled">
+                        <li><a href="#main-wrapper">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#review">Review</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="contact-inner">
+                        <h5 class="title">Find us here</h5>
+                        <ul class="social-share">
+                            <li><a href="#">Fb.</a></li>
+                            <li><a href="#">Be.</a></li>
+                            <li><a href="#">Ln.</a></li>
+                            <li><a href="#">Dr.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="list-unstyled shape-group-13">
+                    <li class="shape shape-1"><img src="assets/media/others/shape-shado.png" alt="Comments"></li>
+
+                </ul>
+            </div>

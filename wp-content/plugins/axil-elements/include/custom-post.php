@@ -6,7 +6,7 @@ include_once( VITAX_ELEMENTS_BASE_DIR . '/include/custom-post-type-base.php');
 $megamenu_args = array(
     'menu_icon' => 'dashicons-editor-kitchensink'
 );
-//$megamenu = new Bdwebteam_Register_Custom_Post_Type( 'Megamenu', 'Mega Menus', $megamenu_args);
+$megamenu = new Bdwebteam_Register_Custom_Post_Type( 'Megamenu', 'Mega Menus', $megamenu_args);
 
 add_action('init', 'register_bdwebteam_team_postype');
 function register_bdwebteam_team_postype()

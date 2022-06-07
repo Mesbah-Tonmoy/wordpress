@@ -22,7 +22,7 @@ $footer_top_style       = $footer_top_layout['footer_top_style'];
         get_template_part('template-parts/footer/footer-top', $footer_top_style );
     }
     if(  "no" !== $footer_area && "0" !== $footer_area  ){
-        get_template_part('template-parts/footer/footer', '1' );
+        get_template_part('template-parts/footer/footer', '2' );
     }
 ?>
 </div>
