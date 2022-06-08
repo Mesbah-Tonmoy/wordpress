@@ -12,17 +12,17 @@ trait PostMeta
         $bdwebteam_options = Helper::bdwebteam_get_options();
         ?>
 
-        <div class="author">
+        <div class="post-author">
              <?php if ($bdwebteam_options['bdwebteam_show_post_author_meta'] != 'no') { ?>
                 <div class="author-thumb">
-                    <?php echo get_avatar(get_the_author_meta('ID'), 80); ?>
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/media/blog/author-1.jpg' ); ?>" alt="Rosalina D. Willaimson" style="width: 50px;">
                 </div>
             <?php } ?> 
-            <div class="info">
+            <div class="content">
                 <?php if ($bdwebteam_options['bdwebteam_show_post_author_meta'] != 'no') { ?> 
                     <h6 class="author-name"> <?php printf('<a class="hover-flip-item-wrapper" href="%1$s"><span class="hover-flip-item"><span data-text="%2$s">%2$s</span></span></a>', esc_url(get_author_posts_url(get_the_author_meta('ID', get_the_author_meta() ))), get_the_author_meta('display_name', get_the_author_meta( 'ID' ))); ?></h6>
                 <?php } ?> 
-             <ul class="blog-meta list-unstyled">
+             <ul class="blog-meta list-unstyled" style="margin-top: -25px;">
                 <?php if ($bdwebteam_options['bdwebteam_show_post_publish_date_meta'] != 'no'  ) { ?>
                         <li class="post-meta-date"><?php echo get_the_time(get_option('date_format')); ?></li>
                     <?php } ?>
@@ -78,7 +78,7 @@ trait PostMeta
          <div class="author ">
              <?php if ($bdwebteam_options['bdwebteam_show_single_post_author_meta'] != 'no' ) { ?>
                 <div class="author-thumb">
-                    <?php echo get_avatar( get_the_author_meta('ID'), 80); ?>
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/media/blog/author-1.jpg' ); ?>" alt="Rosalina D. Willaimson">
                 </div>
             <?php } ?>
             <div class="info">           

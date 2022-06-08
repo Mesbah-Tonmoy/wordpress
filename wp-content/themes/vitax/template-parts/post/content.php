@@ -16,18 +16,22 @@ $thumb_size_class = has_post_thumbnail() ? '':'blog-without-thumb';
 ?>
 
 <div  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="blog-grid <?php echo esc_attr( $thumb_size_class ) ?>">
-        <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <?php Helper::bdwebteam_postmeta(); ?>
-         <?php if(has_post_thumbnail()){ ?>
-            <div class="post-thumbnail">
+    <div class="blog-grid blog-style-2">
+        <?php if(has_post_thumbnail()){ ?>
+            <div class="post-thumnbnail">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail($thumb_size) ?>
                 </a>
             </div>
-            <?php } ?>    
-         
+        <?php } ?> 
+        <div class="post-content"> 
+            <div class="post-top-meta"> 
+                <?php Helper::bdwebteam_postmeta(); ?> 
+            </div>
+            <h4 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
             <?php the_excerpt();?>
+        </div>
+         
            <?php if ( $bdwebteam_options['bdwebteam_read_more_btn'] != "no" ) { ?>  
                 <a href="<?php the_permalink();?>" class="bdwebteam-btn btn-borderd btn-large"><?php  echo esc_attr( $bdwebteam_options['bdwebteam_read_more_btn_txt'] );?></a>
             <?php } ?>
